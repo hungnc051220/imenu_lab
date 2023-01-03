@@ -50,11 +50,11 @@ const Home = () => {
   const [selectedTable, setSelectedTable] = useState({});
   const [listTable, setListTable] = useState([]);
 
-  useEffect(() => {
-    if (_.isEmpty(table)) {
-      setOpenSelectTable(true);
-    }
-  }, [table]);
+  // useEffect(() => {
+  //   if (_.isEmpty(table)) {
+  //     setOpenSelectTable(true);
+  //   }
+  // }, [table]);
 
   const onSelectedSitting = () => {
     if (_.isEmpty(selectedTable)) {
