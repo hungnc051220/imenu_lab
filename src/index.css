@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* body {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+  } */
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/Product-Sans-Regular.otf") format("otf"),
+      url("./assets/fonts/Product-Sans-Bold.otf") format("otf"),
+      url("./assets/fonts/Product-Sans-Italic.otf") format("otf"),
+      url("./assets/fonts/Product-Sans-Bold-Italic.otf") format("otf");
+  }
+}
+
+@layer utilities {
+  .categories-container::-webkit-scrollbar {
+    @apply hidden;
+  }
+}
