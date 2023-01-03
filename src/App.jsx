@@ -18,6 +18,7 @@ import {
 } from "./features/cart/cartSlice";
 import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
+import { setTable } from "./features/table/tableSlice";
 
 let stompClient = null;
 
@@ -35,6 +36,15 @@ const App = () => {
   const branchId = params.get("branch_id");
 
   useScrollToTop();
+
+  useEffect(() => {
+    dispatch(setTable({
+      floorId: "63aeb2720c33a8674ef5f7f4",
+      floorName: "Tầng AM",
+      tableId: "63aeb2720c33a8674ef5f7e0",
+      talbleName: "Team ATO Online"
+    }))
+  }, [])
 
   useEffect(() => {
     dispatch(fetchStore({ branchId }));
